@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TXT-TO-HTML</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      {% csrf_token %}
+      <label for="your_name"><h1>ENTER HERE :</h1> </label>
+      <textarea
+        for="your_name"
+        id="w3review"
+        name="text_box"
+        rows="10"
+        cols="80"
+      ></textarea>
+      <br /><br />
+      <label for="">HEADING SIZE: </label>
+      <input type="number" name="head_size" id="" min="1" max="6" />
+      <br /><br />
+      <label for="">TEXT SIZE: </label>
+      <input type="number" name="text_size" id="" min="1" max="50" />
+      <br /><br />
+      <label for="">HEADING COLOR: </label>
+      <input type="color" name="head_color" id="" />
+      <br /><br />
+      <label for="">TEXT COLOR: </label>
+      <input type="color" name="text_color" id="" />
+      <br /><br />
+      <input type="submit" value="GENERATE CODE" />
+      <input
+        type="button"
+        value="SHOW SAMPLE PAGE"
+        onclick="window.open('html_generator')"
+      />
+      <br /><br />
+      <label>{{output}}</label>
+    </form>
+  </body>
+</html>
